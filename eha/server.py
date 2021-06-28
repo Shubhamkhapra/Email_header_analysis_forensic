@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+# !/usr/bin/env python3
+# Copyright 2021, Shubham Khapra and The Email header analysis
+# See LICENSE for licensing information
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -6,7 +10,6 @@ from email.parser import HeaderParser
 import time
 import dateutil.parser
 
-from datetime import datetime
 import re
 
 import pygal
@@ -16,7 +19,9 @@ from IPy import IP
 import geoip2.database
 
 import argparse
-
+print(" Author  : Shubham Khapra ")
+print("Github  : https://github.com/Shubhamkhapra  ")
+print("=========================================")
 app = Flask(__name__)
 reader = geoip2.database.Reader(
     '%s/data/GeoLite2-Country.mmdb' % app.static_folder)
@@ -40,6 +45,7 @@ def utility_processor():
                         'iso_code': r.iso_code.lower(),
                         'country_name': r.name
                     }
+
     return dict(country=getCountryForIP)
 
 
@@ -57,6 +63,7 @@ def utility_processor():
             ], ['wk', 'd', 'hr', 'min', 'sec'])
             if num
         )
+
     return dict(duration=duration)
 
 
@@ -133,7 +140,7 @@ def index():
             else:
                 data = re.findall(
                     """
-                    ()by
+                   ()by
                     (.*?)
                     (?:
                         (?:with|via)
