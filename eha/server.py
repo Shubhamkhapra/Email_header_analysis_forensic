@@ -204,7 +204,7 @@ def index():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Mail Header Analyser")
+    parser = argparse.ArgumentParser(description="Email Header Analysis Author: SK")
     parser.add_argument("-d", "--debug", action="store_true", default=False,
                         help="Enable debug mode")
     parser.add_argument("-b", "--bind", default="127.0.0.1", type=str)
