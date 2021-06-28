@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{{url_for('static', filename='imgs/fav.png')}}">
-    <title>Mail Header Analyzer (MHA)</title>
+    <title>Email Header Analysis (EHA)</title>
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -34,14 +34,13 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Mail Header Analyzer <small>(MHA)</small></a>
+                <a class="navbar-brand" href="/">Email Header Analysis <small>(EHA)</small></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -51,8 +50,8 @@
                     <li><a href="#contact">Contact</a></li> #}
                 </ul>
                 <ul class="nav navbar-nav navbar-right icons">
-                    <li><a href="https://github.com/lnxg33k/MHA" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://twitter.com/lnxg33k" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/Shubhamkhapra/Email_header_analysis" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/shubhamkhapra-/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -83,15 +82,13 @@
                 </div>
                 {% if delayed %}
                 <div class="col-md-6">
-                    {# <div id="chart_div"></div>#}
-                    {{ chart|safe }}
+                    {#
+                    <div id="chart_div"></div>#} {{ chart|safe }}
                 </div>
                 {% endif %}
             </div>
         </div>
-        <table id="table" data-toggle="table" data-search="true" data-show-columns="true" data-striped="true"
-            data-show-toggle="true" data-show-refresh="true" data-page-size="13" data-sort-name="hop"
-            data-sort-order="asc">
+        <table id="table" data-toggle="table" data-search="true" data-show-columns="true" data-striped="true" data-show-toggle="true" data-show-refresh="true" data-page-size="13" data-sort-name="hop" data-sort-order="asc">
             <thead style="background-color: #333333;color:#d4d4d4;">
                 <tr>
                     <th data-field="hop" data-sortable="true">Hop</th>
@@ -119,8 +116,7 @@
                     <td>{{ v.Direction.2 }}</td>
                     <td>{{ v.Time }}</td>
                     <td>
-                        {% if duration(v.Delay) %} {{ duration(v.Delay) }} {% else %} {% if loop.first %} *
-                        {% else %}0{% endif %} {% endif %}
+                        {% if duration(v.Delay) %} {{ duration(v.Delay) }} {% else %} {% if loop.first %} * {% else %}0{% endif %} {% endif %}
                     </td>
                 </tr>
                 {% endfor %}
@@ -133,8 +129,7 @@
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered">
-                    {% for k,v in n.items() %}
-                    {% if k in security_headers %}
+                    {% for k,v in n.items() %} {% if k in security_headers %}
                     <tr>
                         <th>{{ k }}</th>
                         <td>{{ v }}</td>
@@ -150,8 +145,7 @@
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered">
-                    {% for k,v in n.items() %}
-                    {% if k.startswith('X-') %}
+                    {% for k,v in n.items() %} {% if k.startswith('X-') %}
                     <tr>
                         <th>{{ k }}</th>
                         <td>{{ v }}</td>
@@ -167,8 +161,7 @@
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered">
-                    {% for k,v in n.items() %}
-                    {% if k not in ['Received','Subject','From','To','Message-ID','CC','Date'] and k not in security_headers and not k.startswith('X-') %}
+                    {% for k,v in n.items() %} {% if k not in ['Received','Subject','From','To','Message-ID','CC','Date'] and k not in security_headers and not k.startswith('X-') %}
                     <tr>
                         <th>{{ k }}</th>
                         <td>{{ v }}</td>
@@ -182,8 +175,7 @@
             <div class="col-md-12">
                 <form method="POST">
                     <div class="form-group">
-                        <textarea name='headers' class="form-control" rows="25" placeholder="Paste the header in here."
-                            autofocus required></textarea>
+                        <textarea name='headers' class="form-control" rows="25" placeholder="Paste the header in here." autofocus required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Analyze This !</button>
                 </form>
@@ -201,7 +193,7 @@
     <script src="{{url_for('static', filename='js/bootstrap-table.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/pygal-tooltips.min.js')}}"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
