@@ -4,7 +4,7 @@ attrs==21.2.0
 certifi==2021.5.30
 chardet==4.0.0
 click==8.0.1
-Flask==2.0.1
+Flask==1.1.2
 geoip2==4.2.0
 gunicorn==20.1.0
 idna==2.10
@@ -14,6 +14,7 @@ Jinja2==3.0.1
 MarkupSafe==2.0.1
 maxminddb==2.0.3
 multidict==5.1.0
+pkg-resources==0.0.0
 pygal==2.4.0
 python-dateutil==2.8.1
 requests==2.25.1
