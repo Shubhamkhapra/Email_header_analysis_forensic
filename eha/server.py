@@ -22,7 +22,9 @@ import argparse
 print(" Author  : Shubham Khapra ")
 print("Github  : https://github.com/Shubhamkhapra  ")
 print("=========================================")
+
 app = Flask(__name__)
+
 reader = geoip2.database.Reader(
     '%s/data/GeoLite2-Country.mmdb' % app.static_folder)
 
