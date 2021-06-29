@@ -1,7 +1,6 @@
-Flask==2.0.1
-geoip2==0.1.0
+geoip2==3.0.0
 pygal==2.4.0
+Flask==2.0.1
 IPy==1.01
 python_dateutil==2.8.1
-maxminddb
 gunicorn

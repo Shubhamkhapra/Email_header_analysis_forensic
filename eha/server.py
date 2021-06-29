@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # Copyright 2021, Shubham Khapra and The Email header analysis
 # See LICENSE for licensing information
+import geoip2
 from flask import Flask
 from flask import render_template
-from flask import request , jsonify
+from flask import request
 
 from email.parser import HeaderParser
 import time
@@ -16,7 +17,7 @@ from pygal.style import Style
 
 from IPy import IP
 import geoip2.database
-
+import geoip2_tools.database
 
 import argparse
 print(" Author  : Shubham Khapra ")
