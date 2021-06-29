@@ -1,8 +1,6 @@
 # Email_Header_analysis
-```
   ![eha.jpg](https://github.com/Shubhamkhapra/Email_header_analysis_forensic/blob/c9cdec1918d566992e1639d5a4af295ec6cf0342/eha/static/imgs/eha.jpg)
   
-  ```
 <h1 align="center">
   <br>
   <!-- <a href="https://github.com/Shubhamkhapra/Email_header_analysis_forensic"><img src="./eha/static/imgs/1.png" alt="EHA"></a>
