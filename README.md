@@ -89,7 +89,6 @@ parameter DKIM-Signature: matches with its associated private key stored on the 
 
 ##  Contribution
 You can contribute in following ways:
-
 - Report bugs
 - Develop tool
 - Give suggestions to make it better
