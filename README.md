@@ -39,17 +39,18 @@ Install system Dependencies:
 ~> sudo apt-get install python3-pip
 ~> sudo pip3 install virtualenv
 
-Create a Python virtual environment and activate it: (Because Flask need to run virtual environment)
-~>virtualenv venv
-~>source venv/bin/activate
-
 Clone the GitHub repo & install python Dependencies :
 ~> git clone https://github.com/Shubhamkhapra/Email_header_analysis_forensic.git
 ~> cd Email_header_analysis_forensic
-~> python3 -m pip3 install -r requirements.txt
+
+Create a Python virtual environment and activate it: (Because Flask need to run virtual environment)
+~>virtualenv virt
+~>python3 -m venv virt
+~>source virt/bin/activate
+~>python3 -m pip install -r requirements.txt
 
 Run the server:
-~>cd Email_header_analysis_forensic/eha
+~>cd eha
 ~>python3 server.py
 Everything should go well now vist 
 
