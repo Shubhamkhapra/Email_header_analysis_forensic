@@ -1,15 +1,14 @@
-#!/usr/bin/python3
-# !/usr/bin/env python3
+#!/usr/bin/env python
 # Copyright 2021, Shubham Khapra and The Email header analysis
 # See LICENSE for licensing information
 from flask import Flask
 from flask import render_template
-from flask import request
+from flask import request , jsonify
 
 from email.parser import HeaderParser
 import time
 import dateutil.parser
-
+from datetime import datetime
 import re
 
 import pygal
@@ -17,6 +16,7 @@ from pygal.style import Style
 
 from IPy import IP
 import geoip2.database
+
 
 import argparse
 print(" Author  : Shubham Khapra ")

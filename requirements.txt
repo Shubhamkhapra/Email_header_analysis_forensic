@@ -3,3 +3,5 @@ geoip2==0.1.0
 pygal==2.4.0
 IPy==1.01
 python_dateutil==2.8.1
+maxminddb
+gunicorn
