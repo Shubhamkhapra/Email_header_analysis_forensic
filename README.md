@@ -52,7 +52,8 @@ Create a Python virtual environment and activate it: (Because Flask need to run 
 Run the server:
 ~>cd eha
 ~>python3 server.py
-Everything should go well now vist 
+Everything should go well now vist  Running on http://127.0.0.1:8080/
+enjoy EHA
 
 ```
 
