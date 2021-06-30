@@ -8,7 +8,7 @@
   Email Header Analysis
   <br>
 </h1>
-	[![CodeQL](https://github.com/Shubhamkhapra/Email_header_analysis_forensic/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/Shubhamkhapra/Email_header_analysis_forensic/actions/workflows/codeql-analysis.yml)
+	
 <p align="center">
   <a href="https://github.com/Shubhamkhapra/Email_header_analysis_forensic">
     <img src="https://forthebadge.com/images/badges/made-with-python.svg">
