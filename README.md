@@ -13,6 +13,7 @@
   <a href="https://github.com/Shubhamkhapra/Email_header_analysis_forensic">
     <img src="https://forthebadge.com/images/badges/made-with-python.svg">
     <img src = "https://forthebadge.com/images/badges/uses-html.svg">
+[![CodeQL](https://github.com/Shubhamkhapra/Email_header_analysis_forensic/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/Shubhamkhapra/Email_header_analysis_forensic/actions/workflows/codeql-analysis.yml)
   </a>
 </p>
 
